@@ -23,8 +23,6 @@ export default function Home() {
 
   const generateClientApp = async () => {
     const data = await createNewProject({ slug });
-    console.log("data", data);
-    
   };
 
   return (
