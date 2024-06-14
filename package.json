@@ -1,0 +1,22 @@
+{
+  "name": "product-app-monorepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:product-app": "npm run dev --workspace=product-app",
+    "build:product-app": "npm run build --workspace=product-app",
+    "start:product-app": "npm run start --workspace=product-app"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@10.2.4"
+}
