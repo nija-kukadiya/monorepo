@@ -1,5 +1,6 @@
+const url = process.env.NEXT_PUBLIC_GITHUB_REPO_URL;
 export const newDeployment = {
-  name: "vercel-client-domain-app",
+  name: "monorepo-client-app",
   deploymentId: "123456",
   gitSource: {
     ref: "master",
@@ -12,15 +13,16 @@ export const newDeployment = {
 };
 
 export const newProject = {
-  name: "vercel-client-domain-app",
+  name: "monorepo-client-app",
   buildCommand: "npm run build",
   commandForIgnoringBuildStep: "npm run build",
   devCommand: "npm run dev",
   environmentVariables: [],
   framework: "nextjs",
   gitRepository: {
-    repo: "https://github.com/sagar-vaghela/product-monorepo-poc",
-    type: "github"
+    repo: url,
+    type: "github",
+    sourceless: true
   },
   installCommand: "npm install --prefix=../..",
   outputDirectory: "Next.js default",
